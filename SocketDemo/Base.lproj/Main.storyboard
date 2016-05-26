@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu6-Kt-DNh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ZTI-oe-yfX"/>
+                                    <constraint firstAttribute="width" constant="268" id="qUm-as-hMe"/>
+                                </constraints>
+                                <state key="normal" title="连接服务器"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZTI-oe-yfX"/>
+                                        <exclude reference="qUm-as-hMe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ZTI-oe-yfX"/>
+                                        <include reference="qUm-as-hMe"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="connectToHost:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RdQ-1s-Tz1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clt-ab-LOc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DtU-wV-vgT"/>
+                                    <constraint firstAttribute="width" constant="268" id="OsB-VM-q3L"/>
+                                </constraints>
+                                <state key="normal" title="登陆"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DtU-wV-vgT"/>
+                                        <exclude reference="OsB-VM-q3L"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="DtU-wV-vgT"/>
+                                        <include reference="OsB-VM-q3L"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loginBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZhG-GO-Wix"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oPo-0u-hOw">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Zn8-fb-C4A"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="8t7-Zt-rxY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oPo-0u-hOw" firstAttribute="top" secondItem="clt-ab-LOc" secondAttribute="bottom" constant="28" id="3yi-JM-9dW"/>
+                            <constraint firstItem="clt-ab-LOc" firstAttribute="leading" secondItem="Uu6-Kt-DNh" secondAttribute="leading" id="XPv-4J-fio"/>
+                            <constraint firstItem="oPo-0u-hOw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yuk-Wz-IW8"/>
+                            <constraint firstItem="oPo-0u-hOw" firstAttribute="centerX" secondItem="clt-ab-LOc" secondAttribute="centerX" id="ZfM-LA-zmH"/>
+                            <constraint firstItem="Uu6-Kt-DNh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bjX-JT-foq"/>
+                            <constraint firstItem="clt-ab-LOc" firstAttribute="top" secondItem="Uu6-Kt-DNh" secondAttribute="bottom" constant="33" id="d54-mp-Co9"/>
+                            <constraint firstAttribute="bottom" secondItem="oPo-0u-hOw" secondAttribute="bottom" constant="20" symbolic="YES" id="dyd-zi-XsI"/>
+                            <constraint firstItem="Uu6-Kt-DNh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="ldl-wO-uGd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Uu6-Kt-DNh"/>
+                                <exclude reference="clt-ab-LOc"/>
+                                <exclude reference="oPo-0u-hOw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="bjX-JT-foq"/>
+                                <exclude reference="ldl-wO-uGd"/>
+                                <exclude reference="XPv-4J-fio"/>
+                                <exclude reference="d54-mp-Co9"/>
+                                <exclude reference="3yi-JM-9dW"/>
+                                <exclude reference="Yuk-Wz-IW8"/>
+                                <exclude reference="ZfM-LA-zmH"/>
+                                <exclude reference="dyd-zi-XsI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Uu6-Kt-DNh"/>
+                                <include reference="clt-ab-LOc"/>
+                                <include reference="oPo-0u-hOw"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="bjX-JT-foq"/>
+                                <include reference="ldl-wO-uGd"/>
+                                <include reference="XPv-4J-fio"/>
+                                <include reference="d54-mp-Co9"/>
+                                <include reference="3yi-JM-9dW"/>
+                                <include reference="Yuk-Wz-IW8"/>
+                                <include reference="ZfM-LA-zmH"/>
+                                <include reference="dyd-zi-XsI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="oPo-0u-hOw" id="e54-yH-g1Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277.5" y="329.25"/>
+        </scene>
+    </scenes>
+</document>
